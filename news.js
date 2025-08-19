@@ -3,15 +3,15 @@
 
 const newsItems = [
     {
-        date: 'Aug 2024',
-        content: 'Our paper on [Paper Topic] was accepted to <a href="#" class="font-semibold text-green-700 hover:underline">[Conference/Journal Name]</a>! See you in [Location]!'
+        date: 'Aug 2025',
+        content: 'Start my PhD in <a href="https://www.cse.cuhk.edu.hk/" class="font-semibold text-green-700 hover:underline">Department of Computer Science and Engineering</a> at CUHK!'
     },
-    {
-        date: 'May 2024',
-        content: 'I will be joining <a href="#" class="font-semibold text-green-700 hover:underline">[Company/Lab Name]</a> as a Research Intern this summer.'
-    },
-    {
-        date: 'Jan 2024',
-        content: 'Presented my work on [Project Name] at the [University/Department Symposium].'
-    },
+    // {
+    //     date: 'May 2024',
+    //     content: 'I will be joining <a href="#" class="font-semibold text-green-700 hover:underline">[Company/Lab Name]</a> as a Research Intern this summer.'
+    // },
+    // {
+    //     date: 'Jan 2024',
+    //     content: 'Presented my work on [Project Name] at the [University/Department Symposium].'
+    // },
 ];
