@@ -1,38 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Homepage Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Name - PhD Candidate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .mono-font {
+            font-family: 'Roboto Mono', monospace;
+        }
+        .active-nav {
+            color: #10B981; /* A bright green to indicate active section */
+            font-weight: 700;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Your Brand Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-gray-800">Your Name</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors nav-link">About</a>
+                <a href="#news" class="text-gray-600 hover:text-green-600 transition-colors nav-link">News</a>
+                <a href="#research" class="text-gray-600 hover:text-green-600 transition-colors nav-link">Research</a>
+                <a href="#publications" class="text-gray-600 hover:text-green-600 transition-colors nav-link">Publications</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-green-600 nav-link">About</a>
+            <a href="#news" class="block py-2 text-gray-600 hover:text-green-600 nav-link">News</a>
+            <a href="#research" class="block py-2 text-gray-600 hover:text-green-600 nav-link">Research</a>
+            <a href="#publications" class="block py-2 text-gray-600 hover:text-green-600 nav-link">Publications</a>
+        </div>
     </header>
+
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Your content goes here.</p>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen w-full bg-cover bg-center text-white flex flex-col justify-center items-center text-center p-4" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+            <!-- Transparent Overlay -->
+            <div class="absolute inset-0 bg-green-800 opacity-80"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 max-w-3xl flex flex-col items-center">
+                <img src="https://placehold.co/400x400/e2e8f0/333333?text=Your+Photo" alt="Your Name" class="w-40 h-40 rounded-full object-cover border-4 border-green-400 shadow-xl mb-6">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">Your Name</h1>
+                <p class="mt-4 text-xl md:text-2xl text-green-100">PhD Candidate in [Your Field]</p>
+                <p class="mt-2 text-lg md:text-xl text-green-200">[Your University]</p>
+                <!-- Social/Academic Links -->
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="#" class="text-green-100 hover:text-white transition-colors" aria-label="Email"><i data-lucide="mail" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-green-100 hover:text-white transition-colors" aria-label="Google Scholar"><i data-lucide="graduation-cap" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-green-100 hover:text-white transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-green-100 hover:text-white transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-green-100 hover:text-white transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7"></i></a>
+                </div>
+            </div>
         </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Your content goes here.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Your content goes here.</p>
-        </section>
+
+        <!-- Container for the rest of the content -->
+        <div class="container mx-auto px-6 py-12">
+
+            <!-- About Me Section -->
+            <section id="about" class="py-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+                <!-- Changed items-center to md:items-start for top alignment on desktop -->
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                    <div class="md:w-1/4">
+                        <!-- Changed rounded-full to rounded-2xl for a square with smooth corners -->
+                        <img src="https://placehold.co/400x400/a0aec0/ffffff?text=Your+Photo" alt="Your Name" class="shadow-lg w-64 h-64 md:w-full md:h-auto object-cover mx-auto rounded-2xl">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Your Name</h3>
+                        <div class="text-lg text-gray-700 space-y-4">
+                            <p>
+                                I am a PhD candidate at [Your University], advised by [Your Advisor's Name]. My research focuses on [Your primary research area]. More broadly, I am interested in [Broader interests, e.g., machine learning, computational biology, etc.].
+                            </p>
+                            <p>
+                                Before starting my PhD, I received my M.S./B.S. in [Your Degree] from [Previous University]. I've also had the pleasure of interning at [Company/Lab Name], where I worked on [brief description of work].
+                            </p>
+                            <p>
+                                When I'm not in the lab, I enjoy [Your Hobbies, e.g., hiking, photography, and playing the guitar]. Feel free to reach out via email!
+                            </p>
+                        </div>
+                        <!-- Added Links with Icons -->
+                        <div class="mt-6 flex space-x-6">
+                            <a href="mailto:your.email@university.edu" class="text-gray-500 hover:text-green-600 transition-colors" aria-label="Email">
+                                <i data-lucide="mail" class="w-7 h-7"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors" aria-label="Google Scholar">
+                                <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors" aria-label="LinkedIn">
+                                <i data-lucide="linkedin" class="w-7 h-7"></i>
+                            </a>
+                             <a href="#" class="text-gray-500 hover:text-green-600 transition-colors" aria-label="GitHub">
+                                <i data-lucide="github" class="w-7 h-7"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- News Section -->
+            <section id="news" class="py-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12">News</h2>
+                <div id="news-container" class="max-w-3xl mx-auto space-y-6">
+                    <!-- News items will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="py-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12">Research</h2>
+                <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-6">
+                    <p>
+                        My research aims to [Your high-level research goal]. I am particularly interested in developing novel algorithms and models to address challenges in [Specific Problem Domain]. My current projects include:
+                    </p>
+                    <ul class="list-disc list-inside space-y-4 pl-4">
+                        <li>
+                            <span class="font-semibold">[Project 1 Title]:</span> A brief, one-sentence description of your first major research project. Explain the core idea and its significance.
+                        </li>
+                        <li>
+                            <span class="font-semibold">[Project 2 Title]:</span> A brief, one-sentence description of your second major research project. What problem does it solve?
+                        </li>
+                        <li>
+                            <span class="font-semibold">[Project 3 Title]:</span> A brief, one-sentence description of another project or research thrust.
+                        </li>
+                    </ul>
+                     <p>
+                        I approach these problems using a combination of [Method 1, e.g., deep learning], [Method 2, e.g., statistical modeling], and [Method 3, e.g., large-scale data analysis].
+                    </p>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="py-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12">Publications</h2>
+                <div id="publications-container" class="max-w-4xl mx-auto space-y-8">
+                    <!-- Publications will be dynamically inserted here -->
+                </div>
+            </section>
+
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Your Brand Name</p>
-    </footer>
+
+    <!-- Data Scripts -->
+    <script src="news.js"></script>
+    <script src="publications.js"></script>
+
+    <!-- Main App Script -->
+    <script>
+        // --- DYNAMIC CONTENT RENDERING ---
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsContainer = document.getElementById('news-container');
+            // Check if newsItems exists before trying to render
+            if (typeof newsItems !== 'undefined') {
+                newsItems.forEach(item => {
+                    const newsElement = document.createElement('div');
+                    newsElement.className = 'flex items-start';
+                    newsElement.innerHTML = `
+                        <div class="w-28 text-right pr-4 flex-shrink-0">
+                            <p class="mono-font text-sm text-gray-500">${item.date}</p>
+                        </div>
+                        <div class="border-l-2 border-green-500 pl-4 text-gray-700">
+                            <p>${item.content}</p>
+                        </div>
+                    `;
+                    newsContainer.appendChild(newsElement);
+                });
+            }
+
+
+            const publicationsContainer = document.getElementById('publications-container');
+            // Check if publications exists before trying to render
+            if (typeof publications !== 'undefined') {
+                publications.forEach(pub => {
+                    const pubElement = document.createElement('div');
+                    pubElement.className = 'flex flex-col md:flex-row gap-6';
+                    
+                    const linksHTML = pub.links.map(link => 
+                        `<a href="${link.url}" class="mono-font text-sm bg-green-100 text-green-800 px-2 py-1 rounded-md hover:bg-green-200 transition-colors">${link.name}</a>`
+                    ).join('');
+
+                    pubElement.innerHTML = `
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold">${pub.title}</h3>
+                            <p class="text-gray-600 mt-1">${pub.authors}</p>
+                            <p class="text-gray-800 italic mt-1">${pub.venue}</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                ${linksHTML}
+                            </div>
+                        </div>
+                    `;
+                    publicationsContainer.appendChild(pubElement);
+                });
+            }
+
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Navbar scroll effect & active link highlighting
+            const navbar = document.getElementById('navbar');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                // Shrink navbar on scroll
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-3');
+                } else {
+                    navbar.classList.add('py-3');
+                    navbar.classList.remove('py-2');
+                }
+
+                // Highlight active nav link
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active-nav');
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
