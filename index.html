@@ -136,8 +136,15 @@
 
     <footer class="bg-white border-t border-gray-200 py-5">
         <div class="container mx-auto text-center text-gray-500 text-xs">
-            <p>&copy; 2024 Nawapon Sangsiri. All rights reserved.</p>
+            <!-- <p>&copy; 2024 Nawapon Sangsiri. All rights reserved.</p> -->
+            <p id="last-update"></p>
         </div>
+        <script>
+            const lastModified = new Date(document.lastModified);
+            const options = { year: 'numeric', month: 'long' };
+            document.getElementById('last-update').textContent =
+                'Last update: ' + lastModified.toLocaleString(undefined, options);
+        </script>
     </footer>
 
     <!-- Data Scripts -->
