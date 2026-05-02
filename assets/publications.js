@@ -4,7 +4,7 @@
 const publications = [
     {
         authors: 'Nawaporn Sangsiri, Tao Yufei',
-        title: 'Distributed Learning with Adversarial Gradient Perturbations',
+        title: '**Distributed Learning with Adversarial Gradient Perturbations',
         venue: 'To appear in Proceedings of the 35th International Joint Conference on Artificial Intelligence (IJCAI), 2026',
         links: []
     },
