@@ -2,6 +2,12 @@
 // To add a new publication, add a new object to this array.
 
 const publications = [
+    {
+        authors: 'Nawaporn Sangsiri, Tao Yufei',
+        title: 'Distributed Learning with Adversarial Gradient Perturbations',
+        venue: 'To appear in Proceedings of the 35th International Joint Conference on Artificial Intelligence (IJCAI), 2026',
+        links: []
+    },
     // {
     //     authors: '<strong>Your Name</strong>, Co-author Name, Another Co-author',
     //     title: 'Title of Your Amazing Publication That Solves an Important Problem',
