@@ -3,6 +3,10 @@
 
 const newsItems = [
     {
+        date: 'May 2026',
+        content: 'Our paper <em>Distributed Learning with Adversarial Gradient Perturbations</em> has been accepted to <strong>IJCAI 2026</strong>!'
+    },
+    {
         date: 'Aug 2025',
         content: 'Start my PhD in <a href="https://www.cse.cuhk.edu.hk/" class="font-semibold text-green-700 hover:underline">Department of Computer Science and Engineering</a> at CUHK!'
     },
