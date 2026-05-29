@@ -181,7 +181,7 @@
                     const pubElement = document.createElement('div');
                     pubElement.className = 'text-sm';
                     
-                    const linksHTML = pub.links.map(link => 
+                    const linksHTML = (pub.links || []).map(link => 
                         `<a href="${link.url}" class="mono-font text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-md hover:bg-gray-300 transition-colors">${link.name}</a>`
                     ).join('');
 

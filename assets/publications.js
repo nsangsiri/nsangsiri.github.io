@@ -3,6 +3,15 @@
 
 const publications = [
     {
+        authors: 'Tingting Duan, Nawapon Sangsiri and Yufei Tao',
+        title: '**I/O-Efficient ANN Search in Metric Spaces with Small Approximations',
+        venue: 'To appear in Proceedings of the 30th International Conference on Database Theory (ICDT), 2027',
+        // links: [
+        //     { name: 'PDF', url: 'assets/pdf/icdt27.pdf' }
+        // ]
+    },
+    
+    {
         authors: 'Nawapon Sangsiri and Yufei Tao',
         title: '**Distributed Learning with Adversarial Gradient Perturbations',
         venue: 'To appear in Proceedings of the 35th International Joint Conference on Artificial Intelligence (IJCAI), 2026',
@@ -10,6 +19,7 @@ const publications = [
             { name: 'PDF', url: 'assets/pdf/ijcai26.pdf' }
         ]
     },
+    
     // {
     //     authors: '<strong>Your Name</strong>, Co-author Name, Another Co-author',
     //     title: 'Title of Your Amazing Publication That Solves an Important Problem',
