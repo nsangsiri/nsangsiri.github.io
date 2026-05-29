@@ -180,14 +180,21 @@
                 publications.forEach(pub => {
                     const pubElement = document.createElement('div');
                     pubElement.className = 'text-sm';
-                    
-                    const linksHTML = (pub.links || []).map(link => 
+
+                    const pdfLink = (pub.links || []).find(link => link.name === 'PDF');
+                    const otherLinks = (pub.links || []).filter(link => link.name !== 'PDF');
+
+                    const titleHTML = pdfLink
+                        ? `<a href="${pdfLink.url}" class="hover:text-green-700 hover:underline transition-colors">${pub.title}</a>`
+                        : pub.title;
+
+                    const linksHTML = otherLinks.map(link => 
                         `<a href="${link.url}" class="mono-font text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-md hover:bg-gray-300 transition-colors">${link.name}</a>`
                     ).join('');
 
                     pubElement.innerHTML = `
                         <div>
-                            <h3 class="text-base font-bold font-heading text-gray-800">${pub.title}</h3>
+                            <h3 class="text-base font-bold font-heading text-gray-800">${titleHTML}</h3>
                             <p class="text-gray-600 mt-1 text-xs">${pub.authors}</p>
                             <p class="text-gray-600 italic mt-1 text-xs">${pub.venue}</p>
                             <div class="mt-2 flex flex-wrap gap-2">
